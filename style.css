@@ -1,13 +1,14 @@
+/* GENERAL */
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0b0b0f;
+  font-family: 'Outfit', sans-serif;
+  background: #20202c;
   color: white;
 }
 
 /* TOP BAR */
 .topbar {
-  height: 70px;
+  height: 90px;
   background: #12121a;
   display: flex;
   align-items: center;
@@ -15,25 +16,104 @@ body {
   border-bottom: 1px solid #2a2a3d;
 }
 
-/* NAME */
+/* PROFILE BOX */
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c191f5;
+  box-shadow: 0 0 8px #c191f5;
+}
+
+/* INFO TEXT */
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
 .info h2 {
   margin: 0;
-  color: #00f5ff;
-  font-size: 20px;
-  text-shadow: 0 0 8px #00f5ff;
+  color: #c191f5;
+  font-size: 24px;
 }
 
 .info p {
-  margin: 0;
-  font-size: 12px;
-  color: #aaa;
+  margin: 3px 0 0 0;
+  font-size: 14px;
+  color: #ddd;
 }
 
-/* ABOUT */
+/* CONTACT MENU */
+.contact-menu {
+  margin-top: 4px;
+  position: relative;
+}
+
+/* REMOVE DEFAULT ARROW */
+.contact-menu summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #c191f5;
+}
+
+.contact-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+/* HOVER EFFECT */
+.contact-menu summary:hover {
+  color: #d8b4ff;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  background: #1a1a25;
+  padding: 12px 15px;
+  border-radius: 12px;
+  width: 220px;
+
+  border: 1px solid #2a2a3d;
+  box-shadow: 0 0 12px rgba(193, 145, 245, 0.15);
+
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+/* SHOW WHEN CLICKED */
+.contact-menu[open] .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* DROPDOWN TEXT */
+.dropdown p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* MAIN CONTENT */
 .container {
   padding: 20px;
+  padding-bottom: 80px;
   line-height: 1.6;
-  color: #cfcfcf;
+  color: #e0e0e0;
 }
 
 /* EMPTY SPACE */
@@ -51,14 +131,25 @@ footer {
   justify-content: space-around;
   padding: 12px 0;
   border-top: 1px solid #2a2a3d;
+  flex-wrap: wrap;
 }
 
+/* FOOTER LINKS */
 footer a {
-  color: #00f5ff;
+  color: #c191f5;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 footer a:hover {
-  color: #ff00ff;
+  color: #d8b4ff;
+  text-shadow: 
+    0 0 4px #d8b4ff,
+    0 0 8px #e6ccff;
+}
+
+/* SMOOTH EFFECT */
+* {
+  transition: all 0.2s ease-in-out;
 }
