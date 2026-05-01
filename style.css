@@ -53,48 +53,67 @@ body {
 
 /* CONTACT MENU */
 .contact-menu {
-  margin-top: 4px;
+  margin-top: 6px;
   position: relative;
 }
 
-/* REMOVE DEFAULT ARROW */
+/* CONTACT BUTTON */
 .contact-menu summary {
   list-style: none;
   cursor: pointer;
+
+  display: inline-block;
+  padding: 6px 14px;
+  margin-top: 4px;
+
   font-size: 13px;
   color: #c191f5;
+
+  border: 1px solid #c191f5;
+  border-radius: 6px;
+
+  background-color: transparent;
+  transition: 0.2s ease;
 }
 
+/* REMOVE DEFAULT ARROW */
 .contact-menu summary::-webkit-details-marker {
   display: none;
 }
 
-/* HOVER EFFECT */
+/* HOVER (DESKTOP) */
 .contact-menu summary:hover {
-  color: #d8b4ff;
+  background-color: #c191f5;
+  color: #12121a;
+}
+
+/* ACTIVE (WHEN OPEN) */
+.contact-menu[open] summary {
+  background-color: #c191f5;
+  color: #12121a;
 }
 
 /* DROPDOWN */
 .dropdown {
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: 0;
 
   background: #1a1a25;
   padding: 12px 15px;
-  border-radius: 12px;
+  border-radius: 10px;
   width: 220px;
 
   border: 1px solid #2a2a3d;
-  box-shadow: 0 0 12px rgba(193, 145, 245, 0.15);
+  box-shadow: 0 0 10px rgba(193, 145, 245, 0.15);
 
   opacity: 0;
-  transform: translateY(-8px);
-  transition: 0.25s ease;
+  transform: translateY(-6px);
+  transition: 0.2s ease;
   pointer-events: none;
 }
 
-/* SHOW WHEN CLICKED */
+/* SHOW DROPDOWN */
 .contact-menu[open] .dropdown {
   opacity: 1;
   transform: translateY(0);
@@ -108,6 +127,35 @@ body {
   color: #ddd;
 }
 
+/* SOCIAL LINKS */
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* LINK STYLE */
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  color: #ddd;
+  font-size: 13px;
+}
+
+/* ICON */
+.social-links img {
+  width: 16px;
+  height: 16px;
+}
+
+/* HOVER EFFECT */
+.social-links a:hover {
+  color: #d8b4ff;
+}
 /* MAIN CONTENT */
 .container {
   padding: 20px;
