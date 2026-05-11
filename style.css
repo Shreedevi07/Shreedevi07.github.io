@@ -99,7 +99,7 @@ body {
   top: 45px;
   left: 0;
 
-  width: min(280px, 80vw);
+  width: 240px;
 
   background: #1a1a25;
 
@@ -349,27 +349,29 @@ footer a:hover {
     width: 80%;
 }
 
-/* ===== CONTACT SECTION ===== */
+/* CONTACT SECTION */
 
 .contact-section{
     width: 90%;
-    max-width: 700px;
+    max-width: 600px;
 
-    margin: 60px auto 120px;
+    margin: 50px auto 100px;
 
     text-align: center;
 }
 
-/* MAIN HEADING */
+/* HEADINGS */
 
 .contact-section h1{
+    font-size: 36px;
     color: white;
-
-    font-size: 38px;
-
     margin-bottom: 10px;
+}
 
-    font-weight: 600;
+.contact-section h2{
+    font-size: 22px;
+    color: #ddd;
+    margin-bottom: 25px;
 }
 
 /* PURPLE LINE */
@@ -382,29 +384,15 @@ footer a:hover {
 
     border-radius: 20px;
 
-    margin: 0 auto 30px;
-}
-
-/* SUB HEADING */
-
-.contact-section h2{
-    color: white;
-
-    font-size: 24px;
-
-    margin-bottom: 25px;
-
-    font-weight: 500;
+    margin: 0 auto 25px;
 }
 
 /* FORM */
 
 .contact-section form{
     display: flex;
-
     flex-direction: column;
-
-    gap: 18px;
+    gap: 16px;
 }
 
 /* INPUTS */
@@ -414,21 +402,21 @@ footer a:hover {
 
     width: 100%;
 
-    background: transparent;
+    padding: 16px;
 
     border: 1px solid #2a2a3d;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
-    padding: 18px;
+    background: #12121a;
 
     color: white;
 
     font-size: 15px;
 
-    outline: none;
-
     box-sizing: border-box;
+
+    outline: none;
 
     font-family: 'Outfit', sans-serif;
 }
@@ -437,81 +425,40 @@ footer a:hover {
 
 .contact-section input::placeholder,
 .contact-section textarea::placeholder{
-    color: #777;
+    color: #888;
 }
 
 /* TEXTAREA */
 
 .contact-section textarea{
-    height: 150px;
-
-    resize: none;
+    min-height: 140px;
+    resize: vertical;
 }
 
-/* FOCUS EFFECT */
+/* FOCUS */
 
 .contact-section input:focus,
 .contact-section textarea:focus{
     border-color: #c191f5;
-
-    box-shadow: 0 0 8px rgba(193,145,245,0.4);
 }
 
 /* BUTTON */
 
 .contact-section button{
 
-    background: #12121a;
+    padding: 14px;
 
-    color: #c191f5;
+    border: none;
 
-    border: 1px solid #2a2a3d;
+    border-radius: 12px;
 
-    padding: 16px;
+    background: #c191f5;
 
-    border-radius: 14px;
+    color: #12121a;
 
-    font-size: 17px;
+    font-size: 16px;
 
-    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
 
     cursor: pointer;
-
-    transition: 0.2s ease;
 }
-
-/* HOVER */
-
-.contact-section button:hover{
-
-    background: #1a1a25;
-
-    box-shadow: 0 0 10px rgba(193,145,245,0.4);
-}
-
-/* ===== MOBILE ===== */
-
-@media(max-width:768px){
-
-    .contact-section{
-        margin: 40px auto 100px;
-    }
-
-    .contact-section h1{
-        font-size: 32px;
-    }
-
-    .contact-section h2{
-        font-size: 20px;
-    }
-
-    .contact-section input,
-    .contact-section textarea{
-        font-size: 14px;
-    }
-
-    .contact-section button{
-        font-size: 15px;
-    }
-}
-
