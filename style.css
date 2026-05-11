@@ -99,7 +99,7 @@ body {
   top: 45px;
   left: 0;
 
-  width: 260px;
+  width: min(280px, 80vw);
 
   background: #1a1a25;
 
@@ -288,11 +288,9 @@ footer a:hover {
 .skills-section{
     margin-top: 20px; /* reduces gap from timeline */
 
-    padding: 20px;
+    padding: 20px 0;
 
     background: transparent;
-    border: 1px solid #2a2a3d;
-    border-radius: 18px;
 }
 
 /* HEADING */
@@ -350,3 +348,170 @@ footer a:hover {
 .bootstrap{
     width: 80%;
 }
+
+/* ===== CONTACT SECTION ===== */
+
+.contact-section{
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto 120px;
+
+    text-align: center;
+}
+
+/* MAIN HEADING */
+
+.contact-section h1{
+    color: white;
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+}
+
+/* PURPLE LINE */
+
+.line{
+    width: 60px;
+    height: 5px;
+
+    background: #c191f5;
+
+    border-radius: 20px;
+
+    margin: 0 auto 30px;
+}
+
+/* SUB HEADING */
+
+.contact-section h2{
+    color: white;
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+    font-weight: 500;
+}
+
+/* FORM */
+
+.contact-section form{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+/* INPUTS */
+
+.contact-section input,
+.contact-section textarea{
+
+    width: 100%;
+
+    background: transparent;
+
+    border: 1px solid #2a2a3d;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    font-family: 'Outfit', sans-serif;
+}
+
+/* PLACEHOLDER */
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder{
+    color: #777;
+}
+
+/* TEXTAREA */
+
+.contact-section textarea{
+    height: 150px;
+
+    resize: none;
+}
+
+/* FOCUS EFFECT */
+
+.contact-section input:focus,
+.contact-section textarea:focus{
+    border-color: #c191f5;
+
+    box-shadow: 0 0 8px rgba(193,145,245,0.4);
+}
+
+/* BUTTON */
+
+.contact-section button{
+
+    background: #12121a;
+
+    color: #c191f5;
+
+    border: 1px solid #2a2a3d;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    font-size: 17px;
+
+    font-family: 'Outfit', sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* HOVER */
+
+.contact-section button:hover{
+
+    background: #1a1a25;
+
+    box-shadow: 0 0 10px rgba(193,145,245,0.4);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    .contact-section{
+        margin: 40px auto 100px;
+    }
+
+    .contact-section h1{
+        font-size: 32px;
+    }
+
+    .contact-section h2{
+        font-size: 20px;
+    }
+
+    .contact-section input,
+    .contact-section textarea{
+        font-size: 14px;
+    }
+
+    .contact-section button{
+        font-size: 15px;
+    }
+}
+
